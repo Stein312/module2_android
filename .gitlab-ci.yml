@@ -1,0 +1,18 @@
+stages:
+  - build
+
+# Build project (demo bundle ID)
+build demo:
+  stage: build
+  script:
+    - cd module2_android
+    - gradle assembleRelease
+  tags:
+    - android
+  only:
+    - develop
+    - /^.*\+CI$/
+  artifacts:
+    when: on_success
+    paths:
+        - module2_android/app/build/outputs/apk/release/app-release-unsigned.apk
