@@ -6,7 +6,7 @@ build demo:
   stage: build
   script:
     - cd module2_android
-    - gradle assembleRelease
+    - ./gradlew assembleRelease
   tags:
     - android
   only:
