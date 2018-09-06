@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build module2_android:
+  stage: build
+  script:
+    - cd module2_android
+    - ./gradlew assembleRelease
+  tags:
+    - android
+  only:
+    - /review-^.*$/
