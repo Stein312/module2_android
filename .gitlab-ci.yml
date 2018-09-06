@@ -1,8 +1,7 @@
 stages:
   - build
 
-# Build project (demo bundle ID)
-build demo:
+build module2_android:
   stage: build
   script:
     - cd module2_android
@@ -10,9 +9,4 @@ build demo:
   tags:
     - android
   only:
-    - develop
-    - /^.*\+CI$/
-  artifacts:
-    when: on_success
-    paths:
-        - module2_android/app/build/outputs/apk/release/app-release-unsigned.apk
+    - /review-^.*$/
