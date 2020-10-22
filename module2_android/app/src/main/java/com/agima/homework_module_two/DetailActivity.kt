@@ -13,6 +13,9 @@ class DetailActivity : AppCompatActivity() {
     companion object {
         const val extrasTag = "color"
     }
+    fun getExtrasTag():String{
+        return extrasTag
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

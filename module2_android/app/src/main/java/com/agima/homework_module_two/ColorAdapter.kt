@@ -27,7 +27,7 @@ class ColorAdapter(context: Context, @LayoutRes id: Int, private val color: List
             color[position+1]
 
     @SuppressLint("ViewHolder")
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val row = LayoutInflater.from(context).inflate(R.layout.simple_text, parent, false)
 
         row.title.text = getItem(position).color

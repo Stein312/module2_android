@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             val selected = jsonArray[position] as Color
 
             val intent = Intent(this,DetailActivity::class.java).
-                    apply { putExtra(DetailActivity().extrasTag,selected) }
+                    apply { putExtra(DetailActivity().getExtrasTag(),selected) }
 
             startActivity(intent)
         }
