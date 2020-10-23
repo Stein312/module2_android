@@ -23,8 +23,7 @@ class ColorAdapter(context: Context, @LayoutRes id: Int, private val color: List
 
     override fun getCount(): Int = color.size
 
-    override fun getItem(position: Int): Color =
-            color[position+1]
+    override fun getItem(position: Int): Color = color[position]
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
